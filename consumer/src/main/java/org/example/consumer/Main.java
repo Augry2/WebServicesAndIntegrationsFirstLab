@@ -2,12 +2,11 @@ package org.example.consumer;
 
 import org.example.service.Exchange;
 
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.ServiceLoader;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         // creates a list of objects that implement Greeting, load(Greeting.class) tells the ServiceLoader to look for implementations of the Greeting interface
         ServiceLoader<Exchange> loader = ServiceLoader.load(Exchange.class);
 
@@ -15,12 +14,11 @@ public class Main {
     }
 
 
-
     public static void menu(ServiceLoader<Exchange> loader) {
         boolean exit = false;
         while (!exit) {
             Scanner fetch = new Scanner(System.in);
-            String valueSek = enterSek(fetch);
+            String valueSek = inputAmountInSek(fetch);
             String choice = selectEuroOrDollar(fetch);
 
             switch (choice) {
@@ -54,10 +52,10 @@ public class Main {
         System.out.print("Enter your choice: ");
         String choice = fetch.nextLine();
 
-        while(true){
+        while (true) {
             if (choice.equals("1") || choice.equals("2") || choice.equals("3")) {
                 return choice;
-            }else {
+            } else {
                 System.out.println("Invalid choice. Please enter a valid choice.");
                 choice = fetch.nextLine();
             }
@@ -65,8 +63,8 @@ public class Main {
     }
 
 
-    public static String enterSek(Scanner fetch){
-        while (true){
+    public static String inputAmountInSek(Scanner fetch) {
+        while (true) {
             System.out.print("enter value in SEK: ");
             String value = fetch.nextLine();
             try { // if the parse fails its not a number
