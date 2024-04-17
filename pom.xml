@@ -12,6 +12,7 @@
         <module>consumer</module>
         <module>provider</module>
         <module>service</module>
+        <module>sekToEuroProvider</module>
     </modules>
 
     <properties>

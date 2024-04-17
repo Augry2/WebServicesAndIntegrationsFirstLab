@@ -1,8 +1,7 @@
-import org.example.provider.EnglishGreeting;
-import org.example.provider.SwedishGreeting;
-import org.example.service.Greeting;
+import org.example.provider.SekToDollar;
+import org.example.service.Exchange;
 
 module org.example.provider {
     requires org.example.service;
-    provides Greeting with SwedishGreeting, EnglishGreeting;
+    provides Exchange with SekToDollar;
 }
