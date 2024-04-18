@@ -7,12 +7,12 @@ import java.util.ServiceLoader;
 
 public class Main {
     public static void main(String[] args) {
-        // creates a list of objects that implement Greeting, load(Greeting.class) tells the ServiceLoader to look for implementations of the Greeting interface
+        // creates a list of objects that implement Greeting, load(Greeting.class) tells the ServiceLoader to look for
+        // implementations of the Greeting interface
         ServiceLoader<Exchange> loader = ServiceLoader.load(Exchange.class);
 
         menu(loader);
     }
-
 
     public static void menu(ServiceLoader<Exchange> loader) {
         boolean exit = false;
@@ -62,12 +62,11 @@ public class Main {
         }
     }
 
-
     public static String inputAmountInSek(Scanner fetch) {
         while (true) {
             System.out.print("enter value in SEK: ");
             String value = fetch.nextLine();
-            try { // if the parse fails its not a number
+            try { // if the parse fails it's not a number
                 Integer.parseInt(value);
                 return value;
             } catch (NumberFormatException e) {
