@@ -1,5 +1,5 @@
 # WebServicesAndIntegrationsFirstLab
-first lab assignment for the Web Services And Integrations course on ITHS
+first lab assignment for the Web Services And Integrations course on ITHS. The program is a simple console app where the user is asked to input a value in SEK and is then prompted to select to exchange it to either dollar or euro.
 
 After cloning the project make sure to enable " add dependencies with '' provided '' scope to classpath " for the main class in the consumer module 
 
